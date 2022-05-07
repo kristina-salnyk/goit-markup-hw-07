@@ -1,0 +1,34 @@
+.clients {
+  display: flex;
+  justify-content: center;
+}
+
+.clients__item {
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+}
+
+.clients__link {
+  @extend %flex-centered;
+
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid getIconColor('primary');
+  border-radius: 4px;
+
+  color: getIconColor('primary');
+
+  transition: color 250ms $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    border-color: getAccentColor('primary');
+    color: getAccentColor('primary');
+  }
+}
+
+.clients__icon {
+  fill: currentColor;
+}

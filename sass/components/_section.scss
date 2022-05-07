@@ -1,0 +1,62 @@
+.section {
+  @include setYPadding(94px);
+
+  &--padding-top {
+    padding-top: 0;
+  }
+
+  &--bgr {
+    background: getBgrColor('secondary');
+  }
+
+  &--hero {
+    @extend %x-margin-centered;
+    @include setYPadding(200px);
+
+    height: 600px;
+    max-width: 1600px;
+
+    text-align: center;
+
+    background-color: getBgrColor('hero');
+    background-image: linear-gradient(
+        to right,
+        getBgrColor('hero-overlay'),
+        getBgrColor('hero-overlay')
+      ),
+      url('../images/team.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.section__title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  &--hero {
+    @extend %x-margin-centered;
+    margin-bottom: 30px;
+
+    max-width: 700px;
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: getTextColor('white');
+  }
+}
+
+.section__btn {
+  &--hero {
+    @include setXPadding(32px);
+  }
+}

@@ -1,0 +1,20 @@
+.logo {
+  display: inline-block;
+
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  color: getAccentColor('primary');
+}
+
+.logo__text {
+  &--black {
+    color: getTextColor('black');
+  }
+
+  &--white {
+    color: getTextColor('white');
+  }
+}

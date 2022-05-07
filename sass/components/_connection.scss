@@ -1,0 +1,31 @@
+.connection {
+  display: flex;
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.connection__link {
+  display: flex;
+  align-items: center;
+
+  @include setYPadding(32px);
+
+  color: getTextColor('primary');
+}
+
+.connection__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.connection__item {
+  &:not(:first-child) {
+    margin-left: 50px;
+  }
+}
+
+.page-header__connection {
+  margin-left: auto;
+}
